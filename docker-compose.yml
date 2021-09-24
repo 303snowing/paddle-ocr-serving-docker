@@ -1,0 +1,16 @@
+version: "3"
+services:
+  paddleocr-serving:
+    image: paddleocr-serving
+    build:
+      dockerfile: paddle_ocr/Dockerfile
+      context: paddle_ocr
+    container_name: paddleocr-serving
+    restart: always
+    environment:
+      - TZ=Asia/Shanghai
+    volumes:
+      - /etc/localtime:/etc/localtime
+    ports:
+      - 9998:9998
+    tty: true
