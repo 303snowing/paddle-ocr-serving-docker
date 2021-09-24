@@ -3,7 +3,7 @@ services:
   paddleocr-serving:
     image: paddleocr-serving
     build:
-      dockerfile: paddle_ocr/Dockerfile
+      dockerfile: Dockerfile
       context: paddle_ocr
     container_name: paddleocr-serving
     restart: always
