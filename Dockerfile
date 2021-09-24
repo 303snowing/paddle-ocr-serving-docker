@@ -13,7 +13,7 @@ RUN ln -s /usr/local/bin/python3.8 /usr/local/bin/python \
 COPY ../pip.conf /root/.pip/pip.conf
 
 # 拉取paddleocr仓库
-#RUN apt update -y && apt install git -y
+RUN apt update -y && apt install git -y
 RUN git clone https://github.com/PaddlePaddle/PaddleOCR
 # 从github拉取有时候会失败，直接COPY本地拉好的仓库
 # COPY PaddleOCR /home/PaddleOCR
